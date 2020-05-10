@@ -98,7 +98,7 @@ g:hover rect {
   transition: opacity 0.5s ease-in;
 }
 
-rect.transparent {
+.transparent {
   opacity: 0;
 }
 
@@ -125,6 +125,7 @@ g:hover text.day {
 
 g:hover circle.actual {
   filter: brightness(1.05) saturate(1.5);
+  transition: filter 0.2s ease-in;
 }
 
 svg.month text {
