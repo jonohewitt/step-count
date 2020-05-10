@@ -1,0 +1,132 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+:root {
+  --background-main: #edf4f7;
+  --background-side: #f4f8fa;
+  --primary-blue: #32444d;
+  --secondary-blue: #b3c3cc;
+  --primary-orange: #ff6719;
+  --secondary-orange: #ffaa80;
+}
+
+body {
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: var(--background-main);
+  color: var(--primary-blue);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--secondary-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+p {
+  font-size: 24px;
+}
+
+nav {
+  background-color: var(--background-side);
+  padding: 48px;
+}
+
+main {
+  padding: 48px;
+}
+
+rect {
+  fill: var(--primary-orange);
+  transition: fill 0.5s;
+}
+
+circle.actual {
+  /* fill: var(--primary-blue); */
+  opacity: 0.8;
+  transition: fill 0.2s ease-in;
+}
+
+text {
+  fill: var(--primary-orange);
+  text-anchor: middle;
+  font-size: 14px;
+}
+
+g:hover rect {
+  fill: var(--secondary-orange);
+}
+
+.today text.steps {
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.today g:hover text.steps {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.month text.steps {
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.month g:hover text.steps {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+rect.transparent {
+  opacity: 0;
+}
+
+circle.ring {
+  fill: none;
+  stroke: var(--secondary-blue);
+  stroke-width: 2px;
+  opacity: 0.3;
+}
+
+circle.extra {
+  fill: hsla(0, 0%, 100%, 0);
+}
+
+text.day {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+g:hover text.day {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+g:hover circle.actual {
+  filter: brightness(1.05) saturate(1.5);
+}
+
+svg.month text {
+  fill: var(--primary-blue);
+}
